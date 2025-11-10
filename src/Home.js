@@ -1,5 +1,6 @@
 import React from 'react';
 import {useState } from 'react';
+import BlogList from './BlogList';
 
 // A simple stateless functional component
 const Home = () => {
@@ -14,7 +15,7 @@ const Home = () => {
     id: 2,
     title: "Why React is So Popular",
     body: "React’s component-based structure and virtual DOM make building modern web apps fast and efficient.",
-    author: "Alex"
+    author: "mario"
   },
   {
     id: 3,
@@ -26,7 +27,7 @@ const Home = () => {
     id: 4,
     title: "Staying Productive as a Developer",
     body: "Learn to manage your time, use version control effectively, and take breaks to avoid burnout.",
-    author: "Taylor"
+    author: "mario"
   },
   {
     id: 5,
@@ -39,17 +40,12 @@ const Home = () => {
   
   return (
     <div className="home">
-     {blogs.map((blog)=>(
-        <div className="blog-preview" key={blog.id}>
-          <h2> {blog.title}</h2>
-          <p> witten by {blog.author}</p>
-        </div>
-
-     ))} 
+     <BlogList blogs={blogs} title="All Blogs" />
+     <BlogList blogs={blogs.filter((blog)=> blog.author==='mario')} title="Mario's Blogs" />
            
      
     </div>
   );
-};
+}
 
 export default Home;

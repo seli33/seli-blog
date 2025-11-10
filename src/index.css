@@ -45,3 +45,34 @@ body {
   max-width: 600px;
   padding: 20px;
 }
+.home {
+  max-width: 800px;
+  margin: 1px auto;
+  padding: 20px;
+  font-family: "Times New Roman", serif;
+}
+
+.blog-preview {
+  padding: 20px;
+  margin: 20px 0;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s, transform 0.2s;
+  border-radius: 22px;
+}
+
+.blog-preview:hover {
+  background-color: #f9f9f9;
+  transform: translateY(-3px);
+}
+
+.blog-preview h2 {
+  color: #b39ddb; /* matches your purple blog title */
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.blog-preview p {
+  color: #555;
+  font-style: italic;
+  margin: 0;
+}
