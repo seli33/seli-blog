@@ -11,27 +11,34 @@ body {
 
 .navbar {
   display: flex;
+  justify-content: space-between; /* space between title and links */
   align-items: center;
-  justify-content: space-between;
   padding: 20px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #ccc;
+  font-family: "Times New Roman", serif;
 }
 
 .navbar h1 {
-  color: #b291e8;
+  color: #b39ddb; /* your purple title color */
+  margin: 0;
+}
+
+.navbar .links {
+  display: flex;
+  gap: 20px; /* spacing between Home and New Blog */
 }
 
 .navbar .links a {
-  margin-left: 16px;
-  padding: 6px;
+  padding: 6px 10px;
   color: #86c632;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .navbar .links a:hover {
-  color: #6cd7f1;
+  color: #5a8e1b;
 }
+
 
 .content {
   margin: 40px auto;
