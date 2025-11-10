@@ -1,21 +1,53 @@
 import React from 'react';
+import {useState } from 'react';
 
 // A simple stateless functional component
 const Home = () => {
-
-  const handleClick= () =>{
-    console.log('hello guys');
+  const[blogs,setBlogs]=useState([
+     {
+    id: 1,
+    title: "The Beauty of Simplicity",
+    body: "Minimalism in design and code helps maintain clarity and reduces complexity in projects.",
+    author: "Selina"
+  },
+  {
+    id: 2,
+    title: "Why React is So Popular",
+    body: "React’s component-based structure and virtual DOM make building modern web apps fast and efficient.",
+    author: "Alex"
+  },
+  {
+    id: 3,
+    title: "Mastering CSS Flexbox",
+    body: "Flexbox simplifies layout design by providing powerful alignment and distribution tools for elements.",
+    author: "Jamie"
+  },
+  {
+    id: 4,
+    title: "Staying Productive as a Developer",
+    body: "Learn to manage your time, use version control effectively, and take breaks to avoid burnout.",
+    author: "Taylor"
+  },
+  {
+    id: 5,
+    title: "Exploring AI in Everyday Apps",
+    body: "From chatbots to smart recommendations, AI is transforming how we interact with technology daily.",
+    author: "Riley"
   }
-
-  const handleClickAgain=(name)=>{
-    console.log("hello " +name);
-
-  }
+  ]);
+ 
+  
   return (
     <div className="home">
-      <h1>Home page!</h1>
-      <button onClick= {handleClick}> click me</button>
-      <button onClick= {()=>handleClickAgain('seli')}> click me again </button>
+     {blogs.map((blog)=>(
+        <div className="blog-preview" key={blog.id}>
+          <h2> {blog.title}</h2>
+          <p> witten by {blog.author}</p>
+        </div>
+
+     ))} 
+           
+     
     </div>
   );
 };
