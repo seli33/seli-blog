@@ -30,7 +30,7 @@ body {
 
 .navbar .links a {
   padding: 6px 10px;
-  color: #86c632;
+  color: #b39ddb;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -75,4 +75,23 @@ body {
   color: #555;
   font-style: italic;
   margin: 0;
+}
+.blog-preview a{
+  text-decoration:none;
+}
+.blog-details h2{
+  font-size:20 px;
+  color:red;
+  margin-bottom:10px;
+  }
+
+.blog-details div{
+  margin:20px 0;
+}
+.blog-details button{
+  color:white;
+  background:red;
+  padding:8px;
+  border-radius:8px;
+  cursor:pointer;
 }
