@@ -4,56 +4,38 @@ import BlogList from './BlogList';
 
 // A simple stateless functional component
 const Home = () => {
-  const[blogs,setBlogs]=useState([
-     {
-    id: 1,
-    title: "The Beauty of Simplicity",
-    body: "Minimalism in design and code helps maintain clarity and reduces complexity in projects.",
-    author: "Selina"
-  },
-  {
-    id: 2,
-    title: "Why React is So Popular",
-    body: "React’s component-based structure and virtual DOM make building modern web apps fast and efficient.",
-    author: "mario"
-  },
-  {
-    id: 3,
-    title: "Mastering CSS Flexbox",
-    body: "Flexbox simplifies layout design by providing powerful alignment and distribution tools for elements.",
-    author: "Jamie"
-  },
-  {
-    id: 4,
-    title: "Staying Productive as a Developer",
-    body: "Learn to manage your time, use version control effectively, and take breaks to avoid burnout.",
-    author: "mario"
-  },
-  {
-    id: 5,
-    title: "Exploring AI in Everyday Apps",
-    body: "From chatbots to smart recommendations, AI is transforming how we interact with technology daily.",
-    author: "Riley"
-  }
-  ]);
+  const[blogs,setBlogs]=useState(null);
+  const[isPending,setIsPending]=useState(true);
  
-  const [name, setName]= useState('mario');
 
   const handleDelete =(id)=>{
     const newBlogs=blogs.filter(blog=>blog.id !==  id )
     setBlogs(newBlogs)
   }
 
-  useEffect(()=>{
-    console.log("this is use effect ");
-    console.log(name);
-  },[name]);
+  useEffect(()=> {
+    fetch('http://localhost:8000/blogs')
+        .then(res => {
+          if(!res.ok){
+            throw Error('couldnot fetch data');
+          }
+          return res.json()
+        })
+        .then(data =>{
+          console.log(data);
+          setBlogs(data);
+          setIsPending(false);
+        })
+        .catch(err=>{
+          console.log(err.message);
+        })
+  },[]);
 
   return (
     <div className="home">
-     <BlogList blogs={blogs} title="All Blogs" handleDelete={handleDelete} />
-     <button onClick ={()=>setName('luigi')}>change name</button>
-           
+      {isPending && <div>Loading....</div>}
+      {blogs && <BlogList blogs={blogs} title="All Blogs" handleDelete={handleDelete} />
+      }   
      
     </div>
   );
