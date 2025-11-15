@@ -1,9 +1,9 @@
-import logo from './logo.svg';
+import React from "react";
 import Navbar from './Navbar';
 import Home from './Home';
 import Create from './Create';
 import BlogDetails from './BlogDetails';
-import {BrowserRouter as Router,Route,Switch } from 'react-router-dom';
+import {BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 
 function App() {
   const title="welcome to seli's blog ";
@@ -13,22 +13,13 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar/>
+        <Navbar />
         <div className="content">
-          <Switch>
-            <Route exact path="/">
-              <Home/>
-            </Route>
-
-             <Route path="/create">
-              <Create/>
-            </Route>
-
-            <Route path="/blogs/:id">
-              <BlogDetails/>
-            </Route>
-
-            </Switch>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/create" element={<Create />} />
+            <Route path="/blogs/:id" element={<BlogDetails />} />
+          </Routes>
         </div>
       </div>
     </Router>

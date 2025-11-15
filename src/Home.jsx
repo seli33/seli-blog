@@ -1,6 +1,6 @@
 import React from 'react';
 import BlogList from './BlogList';
-import useFetch from './useFetch';
+import useFetch from './useFetch.js';
 
 // A simple stateless functional component
 const Home = () => {
