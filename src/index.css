@@ -19,7 +19,7 @@ body {
 }
 
 .navbar h1 {
-  color: #2E6F40; /* your purple title color */
+  color: #0C2B4E; /* your purple title color */
   margin: 0;
 }
 
@@ -30,7 +30,7 @@ body {
 
 .navbar .links a {
   padding: 6px 10px;
-  color: #68BA7F;
+  color: #0C2B4E;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -90,7 +90,7 @@ body {
 }
 .blog-details button{
   color:white;
-  background:rgb(249, 208, 208);
+  background:#A7AAE1;
   padding:8px;
   border-radius:8px;
   cursor:pointer;

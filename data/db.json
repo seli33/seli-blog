@@ -8,16 +8,10 @@
       "id": "c45d"
     },
     {
-      "id": "2",
-      "title": "Why React is So Popular",
-      " body": "React’s component-based structure and virtual DOM make building modern web apps fast and efficient.",
-      "author": "mario"
-    },
-    {
-      "id": "6ac9",
-      "title": "happy days",
-      "body": "hello gauyss!!!!",
-      "author": "selina"
+      "id": "a800",
+      "title": "How to Stay Motivated While Coding",
+      "body": "There are days when coding feels impossible. The bugs never end, the logic doesn’t make sense, and frustration builds up. But taking breaks, setting small goals, and celebrating progress can keep you moving forward. Remember — every coder struggles, even the experts.",
+      "author": "hari ram"
     }
   ]
 }
