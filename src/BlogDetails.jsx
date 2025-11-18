@@ -15,7 +15,7 @@ const BlogDetails = () => {
             navigate('/');
         })
 
-    }
+    
 
   return (
     <div className="blog-details">
@@ -27,6 +27,7 @@ const BlogDetails = () => {
                     <p>Written by {blog.author}</p>
                     <div>{blog.body}</div>
                     <button onClick={handleClick}>Delete Blog</button>
+                    <button onClick={() => navigate(`/edit/${blog.id}`)}>Edit Blog</button>
                 </article>
             )
         }
@@ -34,5 +35,5 @@ const BlogDetails = () => {
     </div>
   );
 };
-
+}
 export default BlogDetails;
