@@ -1,16 +1,23 @@
 {
-"blogs":[
-{
-   " id": 1,
-    "title": "The Beauty of Simplicity",
-    "body": "Minimalism in design and code helps maintain clarity and reduces complexity in projects.",
-    "author": "Selina"
-  },
-  {
-    "id": 2,
-    "title": "Why React is So Popular",
-   " body": "React’s component-based structure and virtual DOM make building modern web apps fast and efficient.",
-    "author": "mario"
-  }
-]
+  "blogs": [
+    {
+      " id": 1,
+      "title": "The Beauty of Simplicity",
+      "body": "Minimalism in design and code helps maintain clarity and reduces complexity in projects.",
+      "author": "Selina",
+      "id": "c45d"
+    },
+    {
+      "id": "2",
+      "title": "Why React is So Popular",
+      " body": "React’s component-based structure and virtual DOM make building modern web apps fast and efficient.",
+      "author": "mario"
+    },
+    {
+      "id": "6ac9",
+      "title": "happy days",
+      "body": "hello gauyss!!!!",
+      "author": "selina"
+    }
+  ]
 }

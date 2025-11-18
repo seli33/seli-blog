@@ -4,7 +4,7 @@ import useFetch from './useFetch.js';
 
 // A simple stateless functional component
 const Home = () => {
- const{data:blogs,isPending}=useFetch('http://localhost:8000/blogs')
+ const{data:blogs,isPending}=useFetch('http://localhost:5000/blogs')
  
 
   return (

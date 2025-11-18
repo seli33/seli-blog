@@ -90,7 +90,7 @@ body {
 }
 .blog-details button{
   color:white;
-  background:red;
+  background:rgb(249, 208, 208);
   padding:8px;
   border-radius:8px;
   cursor:pointer;
